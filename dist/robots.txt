@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chaveiro-ws-rocha.vercel.app/sitemap.xml
