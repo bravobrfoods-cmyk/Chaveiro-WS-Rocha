@@ -18,6 +18,8 @@ A página obrigado.html abre na aba original após o clique normal no WhatsApp, 
 
 ## Após publicar
 
+A página inicial declara o nome Chaveiro WS Rocha com JSON-LD WebSite e og:site_name. A logo é fornecida como favicon PNG de 192 × 192 e também em /favicon.ico. Depois de publicar alterações de identidade, inspecione a URL inicial no Google Search Console e solicite indexação. O Google decide o nome e o ícone exibidos; uma nova leitura pode levar dias ou semanas. Referências: https://developers.google.com/search/docs/appearance/site-names e https://developers.google.com/search/docs/appearance/favicon-in-search .
+
 Confira links, mapa, ligação e WhatsApp no celular. Teste uma URL inexistente e seu status HTTP 404. Verifique a propriedade no Google Search Console e envie https://chaveiro-ws-rocha.vercel.app/sitemap.xml . A publicação e o sitemap não garantem indexação nem posicionamento.
 
 Conferir a política de privacidade com as práticas efetivas de atendimento, retenção e hospedagem. Referência de transparência: https://www.gov.br/anpd/pt-br/acesso-a-informacao/aviso-de-privacidade

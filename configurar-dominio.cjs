@@ -17,6 +17,11 @@ for (const file of pages) {
     .replace(/(<meta property="og:image" content=")[^"]+(">)/g, '$1' + origin + '/assets/social-share.jpg$2');
   if (file !== '404.html') html = html.replace('</head>', `<link rel="canonical" href="${publicUrl}"><meta property="og:url" content="${publicUrl}"></head>`);
   if (file === 'index.html') {
+    html = html.replace(/<script id="website-schema" type="application\/ld\+json">([\s\S]*?)<\/script>/, (_, json) => {
+      const website = JSON.parse(json);
+      Object.assign(website, { '@id': origin + '/#website', url: origin + '/', publisher: { '@id': origin + '/#negocio' } });
+      return '<script id="website-schema" type="application/ld+json">' + JSON.stringify(website) + '</script>';
+    });
     html = html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/, (_, json) => {
       const business = JSON.parse(json);
       Object.assign(business, { '@id': origin + '/#negocio', url: origin + '/', image: origin + '/assets/social-share.jpg', logo: origin + '/assets/logo-ws-rocha.png', hasMap: 'https://www.google.com/maps?q=R.+Rafael+Sampaio,+29,+Campinas+SP' });
